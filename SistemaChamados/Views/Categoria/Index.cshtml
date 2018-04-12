@@ -1,0 +1,30 @@
+﻿@model List<Model.Entity.Categoria>
+@{
+    ViewBag.Title = "Categorias";
+}
+
+<h2 class="text-center text-success">Categorias</h2>
+<div class="well well-sm"><a class="btn btn-primary" href="~/Categoria/Create">Novo</a></div>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr class="table-primary">
+            <th>Nome</th>
+            <th colspan="3">Operacões</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var objCategoria in Model)
+        {
+            <tr>
+                <td>@objCategoria.IdCategoria</td>
+                <td>@objCategoria.Nome</td>
+                <td><a class="btn btn-info" href="~/Categoria/Update/@objCategoria.IdCategoria"><span class="fa fa-edit">Alterar</span></a></td>
+                <td><a class="btn btn-danger" href="~/Categoria/Delete/@objCategoria.IdCategoria"><span class="fa fa-book">Apagar</span></a></td>
+            </tr>
+        }
+    </tbody>
+        
+</table>
+<div class="text-primary text-danger text-center">
+    @ViewBag.MensagemErro;
+</div>

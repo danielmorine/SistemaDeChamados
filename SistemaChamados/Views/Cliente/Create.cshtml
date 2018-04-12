@@ -1,0 +1,75 @@
+﻿@model Model.Entity.Cliente
+@{
+    ViewBag.Title = "Novo Cliente";
+}
+
+<div class="well well-sm text-primary text-center">
+    @ViewBag.MensagemInicio
+</div>
+
+@*@Html.EditorForModel()*@
+@using (Html.BeginForm())
+{
+    <section class="container py-5">
+        <div class="row">
+            <form class="col-lg-6">
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        @Html.LabelForModel("Responsável", htmlAttributes: new { @class = "control-label col-md-6" })
+                        @Html.EditorFor(model => model.Pessoa, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelForModel("Email", htmlAttributes: new { @class = "control-label col-md-6" })
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                    <div class="form-group col-md-6">
+                        @Html.LabelForModel("Telefone", htmlAttributes: new { @class = "control-label col-md-6" })
+                        @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.Cnpj, htmlAttributes: new { @class = "control-label col-md-6" })
+                        @Html.EditorFor(model => model.Cnpj, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelForModel("Razão Social", htmlAttributes: new { @class = "control-label col-md-6" })
+                        @Html.EditorFor(model => model.RazaoSocial, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelForModel("Nome da empresa", htmlAttributes: new { @class = "control-label col-md-6" })
+                        @Html.EditorFor(model => model.Apelido, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelForModel("Endereço", htmlAttributes: new { @class = "control-label col-md-6" })
+                        @Html.EditorFor(model => model.Endereco, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelForModel("Cidade", htmlAttributes: new { @class = "control-label col-md-6" })
+                        @Html.EditorFor(model => model.Cidade, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="form-actions col-md-offset-2">
+            <input class="btn btn-primary" type="submit" name="btnsalvar" value="Salvar" />|
+            @Html.ActionLink("Voltar a Lista", "Index")
+        </div>
+    </section>
+
+}
+
+        <div class="text-primary text-success text-center">
+            @ViewBag.MensagemExito;
+        </div>
+        <div class="text-primary text-danger text-center">
+            @ViewBag.MensagemErro;
+        </div>
+
+    
+
+

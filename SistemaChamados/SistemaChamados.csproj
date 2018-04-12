@@ -200,6 +200,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriaController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,8 +214,47 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\brand\bootstrap-outline.svg" />
+    <Content Include="assets\brand\bootstrap-punchout.svg" />
+    <Content Include="assets\brand\bootstrap-social-logo.png" />
+    <Content Include="assets\brand\bootstrap-social.png" />
+    <Content Include="assets\brand\bootstrap-solid.svg" />
+    <Content Include="assets\css\docs.min.css" />
+    <Content Include="assets\img\bootstrap-stack.png" />
+    <Content Include="assets\img\bootstrap-themes.png" />
+    <Content Include="assets\img\favicons\android-chrome-192x192.png" />
+    <Content Include="assets\img\favicons\android-chrome-512x512.png" />
+    <Content Include="assets\img\favicons\apple-touch-icon.png" />
+    <Content Include="assets\img\favicons\browserconfig.xml" />
+    <Content Include="assets\img\favicons\favicon-16x16.png" />
+    <Content Include="assets\img\favicons\favicon-32x32.png" />
+    <Content Include="assets\img\favicons\mstile-144x144.png" />
+    <Content Include="assets\img\favicons\mstile-150x150.png" />
+    <Content Include="assets\img\favicons\mstile-310x150.png" />
+    <Content Include="assets\img\favicons\mstile-310x310.png" />
+    <Content Include="assets\img\favicons\mstile-70x70.png" />
+    <Content Include="assets\img\favicons\safari-pinned-tab.svg" />
+    <Content Include="assets\js\docs.min.js" />
+    <Content Include="assets\js\src\application.js" />
+    <Content Include="assets\js\src\ie-emulation-modes-warning.js" />
+    <Content Include="assets\js\src\pwa.js" />
+    <Content Include="assets\js\vendor\anchor.min.js" />
+    <Content Include="assets\js\vendor\clipboard.min.js" />
+    <Content Include="assets\js\vendor\holder.min.js" />
+    <Content Include="assets\js\vendor\jquery-slim.min.js" />
+    <Content Include="assets\js\vendor\popper.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="dist\css\bootstrap-grid.css" />
+    <Content Include="dist\css\bootstrap-grid.min.css" />
+    <Content Include="dist\css\bootstrap-reboot.css" />
+    <Content Include="dist\css\bootstrap-reboot.min.css" />
+    <Content Include="dist\css\bootstrap.css" />
+    <Content Include="dist\css\bootstrap.min.css" />
+    <Content Include="dist\js\bootstrap.bundle.js" />
+    <Content Include="dist\js\bootstrap.bundle.min.js" />
+    <Content Include="dist\js\bootstrap.js" />
+    <Content Include="dist\js\bootstrap.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -222,7 +263,41 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
+    <Content Include="assets\css\docs.min.css.map" />
+    <Content Include="assets\img\favicons\manifest.json" />
+    <Content Include="assets\js\.eslintrc.json" />
+    <Content Include="assets\scss\docs.scss" />
+    <Content Include="assets\scss\_ads.scss" />
+    <Content Include="assets\scss\_algolia.scss" />
+    <Content Include="assets\scss\_anchor.scss" />
+    <Content Include="assets\scss\_brand.scss" />
+    <Content Include="assets\scss\_browser-bugs.scss" />
+    <Content Include="assets\scss\_buttons.scss" />
+    <Content Include="assets\scss\_callouts.scss" />
+    <Content Include="assets\scss\_clipboard-js.scss" />
+    <Content Include="assets\scss\_colors.scss" />
+    <Content Include="assets\scss\_component-examples.scss" />
+    <Content Include="assets\scss\_content.scss" />
+    <Content Include="assets\scss\_examples.scss" />
+    <Content Include="assets\scss\_footer.scss" />
+    <Content Include="assets\scss\_masthead.scss" />
+    <Content Include="assets\scss\_nav.scss" />
+    <Content Include="assets\scss\_sidebar.scss" />
+    <Content Include="assets\scss\_skiplink.scss" />
+    <Content Include="assets\scss\_syntax.scss" />
+    <Content Include="assets\scss\_variables.scss" />
+    <Content Include="dist\css\bootstrap-grid.css.map" />
+    <Content Include="dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="dist\css\bootstrap-reboot.css.map" />
+    <Content Include="dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="dist\css\bootstrap.css.map" />
+    <Content Include="dist\css\bootstrap.min.css.map" />
+    <Content Include="dist\js\bootstrap.bundle.js.map" />
+    <Content Include="dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="dist\js\bootstrap.js.map" />
+    <Content Include="dist\js\bootstrap.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -268,6 +343,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Categoria\Index.cshtml" />
+    <Content Include="Views\Categoria\Create.cshtml" />
+    <Content Include="Views\Categoria\Delete.cshtml" />
+    <Content Include="Views\Categoria\Update.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Cliente\Create.cshtml" />
+    <Content Include="Views\Cliente\Delete.cshtml" />
+    <Content Include="Views\Cliente\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -284,6 +367,16 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model.Entity\Model.Entity.csproj">
+      <Project>{556870CE-6B83-4853-8FA0-CC4C14A7365B}</Project>
+      <Name>Model.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model.Neg\Model.Neg.csproj">
+      <Project>{302786D0-288A-475E-B90B-39CCBBF9A4F5}</Project>
+      <Name>Model.Neg</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
