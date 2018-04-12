@@ -45,6 +45,7 @@
     <Compile Include="ClienteDao.cs" />
     <Compile Include="ConexaoDB.cs" />
     <Compile Include="Obrigatorio.cs" />
+    <Compile Include="PrioridadeDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
