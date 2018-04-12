@@ -8,11 +8,11 @@ namespace Model.Entity
 {
     public class Prioridade
     {
-        private string idPrioridade;
+        private long idPrioridade;
         private string prioridadeDescricao;
         private int estado;
 
-        public string IdPrioridade { get => idPrioridade; set => idPrioridade = value; }
+        public long IdPrioridade { get => idPrioridade; set => idPrioridade = value; }
         public string PrioridadeDescricao { get => prioridadeDescricao; set => prioridadeDescricao = value; }
         public int Estado { get => estado; set => estado = value; }
 
@@ -20,11 +20,11 @@ namespace Model.Entity
         {
 
         }
-        public Prioridade(string idPrioridade)
+        public Prioridade(long idPrioridade)
         {
 
         }
-        public Prioridade(string idPrioridade, string prioridadeDescricao)
+        public Prioridade(long idPrioridade, string prioridadeDescricao)
         {
             this.idPrioridade = idPrioridade;
             this.PrioridadeDescricao = prioridadeDescricao;
